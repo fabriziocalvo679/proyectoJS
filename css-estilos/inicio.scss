@@ -1,0 +1,132 @@
+
+@import "variables" ;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,400;1,500&display=swap');
+
+body  {background-color: black;
+overflow-x: hidden;}
+html {overflow-x: hidden;}
+
+
+
+//Menu de navegacion 
+@import "navbar";
+
+
+/* ---------PRIMERA SECCION  -----------*/
+
+
+#background {background-image: url(../img/banners/inicio-background.jpeg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment: scroll;
+    }
+
+
+
+.texto-central { text-align: center;
+    padding: 250px;
+    height: 100vh;
+    }
+    
+    #pizzeria {color: rgb(7, 7, 7);
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    text-shadow: 2px 2px rgb(252, 221, 184);}
+    
+    #don-matute {color:rgb(7, 7, 7);
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    text-shadow: 2px 2px  rgb(252, 221, 184);
+    }
+
+
+/* ---------SEGUNDA SECCION  -----------*/
+
+.segunda-seccion {
+padding-top: 80px ;
+padding-bottom: 80px;
+padding-left: 50px;
+padding-right: 50px;
+text-align: center;
+}
+ //primer encabezado
+.encabezado{
+margin-top: 50px;
+font-family: $font-titulos;
+font-size: 50px;
+color: $color-titulos;
+text-shadow: 2px 2px  rgb(0, 0, 0);
+text-align: center;
+background-image: url(../img/banner-napo.JPG);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+width: 100vw; 
+padding: 200px;}
+
+
+.encabezado.envio{
+background-image: url(../img/35.jpg);
+
+}
+
+
+.recuadros {background-color: beige;
+h5 {font-family: 'Dancing Script';
+font-size: 30px;
+color: black}
+
+p {font-family: $font-textos;
+}
+}
+.card a { filter: brightness(83%);}
+.card a:hover { filter: brightness(100%);}
+
+
+.btn-warning { background-color:  beige !important;
+    border: $color-titulos!important;
+    }
+    .btn-warning:hover { background-color: $color-titulos!important;
+    }
+/* ---------TERCERA SECCION ENVIO -----------*/
+
+.encabezado.envio{
+background-image: url(../img/banners/clientes.jpeg);
+}
+
+.foto-envios {margin-top: 100px;
+width: 100vw ;
+} 
+
+
+/*-------------- BOTON -------- */
+
+/* ---------PIE DE PAGINA  -----------*/
+@import "footer";
+
+/*---------RESPONSIVE -----------*/
+
+@media (max-width: 992px) {
+
+
+.texto-central{ margin: 0%;
+    text-align: center;
+    padding: 200px;
+}
+#background { background-attachment: scroll;}
+
+#pizzeria {
+font-size: 60px;
+}
+
+#don-matute {
+font-size:60px;
+}
+
+.encabezado {font-size:40px;}
+
+}
+
+@import "carrito" ;

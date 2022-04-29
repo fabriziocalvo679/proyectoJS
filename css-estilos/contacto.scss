@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,400;1,500&display=swap');
+@import "variables";
+
+
+body {padding: 0px;
+margin: 0px;
+background-color: rgb(7, 7, 7);
+overflow-x: hidden;
+}
+
+/* ---------TIPOGRAFIAS-----------*/
+
+.titulos { font-family: $font-titulos;
+color: $color-titulos;
+text-align: center;
+font-size: 25px;
+padding: 10px;}
+.palabras {font-family:$font-textos;
+color: $color-textos;
+padding: 2px}
+
+
+
+/* ---------Barra de Navegacion del menu -----------*/
+@import "navbar";
+
+
+
+
+
+/* ---------ENCABEZADO Y COLUMNAS -----------*/
+.encabezado { height: 50vh;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+    color: $color-encabezado;
+    text-shadow: black 1px 1px;
+    background-image: url(../img/banners/contacto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    
+    h1 { position: relative;
+    top: 50%;}
+    }
+
+#iconos {
+font-size: 30px;
+color: rgb(240, 198, 147);
+}
+
+
+#columnas {text-align: center;
+padding: 40px;
+}
+
+
+.redes-sociales {text-align: center;
+    margin-top: 20px;
+a {text-decoration: none;
+}
+
+}
+.redes-icon{padding: 15px;
+color: beige;
+font-size: 35px;}
+.redes-icon:hover {color:rgb(240, 198, 147) ;}
+
+/* ----------------------FORMULARIO-------------------------- */
+
+
+.form-container { margin-top: 50px;
+margin-bottom: 50px;}
+
+.formulario  
+{padding: 25px;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+}
+.mb-3 {color:$color-textos;
+font-family: $font-textos;
+padding: 10px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.form-etiqueta  {justify-content: center !important;}
+.form-etiqueta { 
+padding-top: 20px;}
+.boton-enviar {padding-top: 20px; }
+.btn-warning {background-color: bisque !important;}
+
+/* ---------PIE DE PAGINA  -----------*/
+@import "footer";
+
+
+/* ---------RESPONSIVE -----------*/
+
+
+
+/* ---------768px -----------*/
+@media (max-width:992px)  {
+    .formulario { margin-left: 70px;
+        margin-right: 70px;
+        overflow-x: hidden;}
+}
+
+
+@media (min-width: 768px) {
+.pantalla-chica {display: none;}
+body { overflow-x: hidden;}
+}
+@media (max-width: 768px) {
+
+iframe  {width: 100%;}
+.formulario { margin-left: 20px;
+margin-right: 20px;
+padding: 10px;}
+.pantalla-grande {display: none;
+}
+body {overflow-x: hidden;}
+}
+
+/* ---------576px -----------*/
+@media (max-width: 576px) { 
+
+body {overflow-x: hidden;}
+#columnas {
+flex-direction: column;
+}
+.pantalla-grande {display: none;}
+
+.col-responsive {
+padding-top: 5px;
+padding-bottom: 5px;}
+
+.encabezado{ background-attachment: scroll;}
+
+}
+
+
+@import "carrito" ;

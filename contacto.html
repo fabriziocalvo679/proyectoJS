@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
+    <META NAME="DESCRIPTION" CONTENT="Contactate con la mejor pizzería de colegiales , acá vas a encontrar pizzas empanadas bebidas y mas !">
+    <META NAME="KEYWORDS" CONTENT="pizzería,pizzas,empanadas,calzones,bebidas,postres,colegiales,Belgrano,las cañitas,Palermo,Núñez">
+    <META NAME="Resource-type" CONTENT="infro">
+    <META NAME="robots" content="ALL">
+<!--Favicon-->
+<link rel="icon" href="/favicon/logodonmatute.png">
+<!--Boostrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!--Hoja de estilos-->
+<link rel="stylesheet" href="css/contacto-min.css">
+<!--Fontawesome icons-->
+<script src="https://kit.fontawesome.com/a91c5402c2.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<!--Sweet Alert javascript-->
+<script defer  src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script defer src="/js/contacto.js"></script>
+<title>Contacto</title>
+
+
+<body >
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo-img" src="img/logodonmatute1.png" alt="logo" /> </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "  href="nuestromenu.html">Nuestro Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobrenosotros.html"> Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link   " href="reseñas.html">Reseñas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " href="contacto.html">Contacto</a>
+                    </li>
+                    <ul class="navbar-brand">
+                        <li class="submenu">
+                            <i class="fa-solid fa-cart-shopping"></i> 
+                            <div id="carrito">
+                                <p class="vacio">carrito vacio</p>
+                                <table id="lista-carrito" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Imagen</th>
+                                            <th scope="col">Producto</th>
+                                            <th scope="col">Precio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                                <a class="btn btn-warning" href="#" id="vaciar-carrito" >vaciar carrito</a>
+                                <a onclick="window.location = 'checkout.html' " target="_new" href="checkout.html" class="btn btn-warning"  id="confirmarPedido">Confirmar Pedido</a> </div>
+                        </li>
+                </ul>
+                </ul>
+        </div>
+</nav>
+
+<div class="encabezado  border-bottom" > 
+<h1>Contactanos</h1>
+</div>
+
+<!----------------------------PRIMERA SECCION ---------------------------->
+<div class="row pantalla-grande " id="columnas" > 
+
+<div class="col border-end" > 
+<i class="fas fa-mobile-alt" id="iconos" alt="cellphone image"></i>
+<h4 class="titulos">Teléfonos</h4>
+<label class="palabras" ><i class="fas fa-phone-alt" alt="phone image"></i> 4553- 5534  /  4553-9910</label> 
+<br>
+<label class="palabras"> <i class="fab fa-whatsapp "  alt="whatsappicon"></i> 1128178567</label>
+
+</div>
+
+
+<div class="col border-end ">
+<i class="fas fa-map-marked-alt" id="iconos" alt="map image"></i>
+<h4 class="titulos">Dirección</h4>
+<label class="palabras"> <i class="fas fa-map-marker-alt"></i> Teodoro García 2502</label>
+
+</div>
+
+<div class="col " >
+<i class="fas fa-store" id="iconos" alt="store image"></i>
+<h4 class="titulos">Horarios</h4> 
+<label class="palabras" ><i class="far fa-clock"alt="clock icon"></i> Lunes a Sábados de <time>12:00am a 16:00pm </time></label> 
+<label class="palabras" ><i class="far fa-clock" alt="clock icon"></i> Lunes a Domingos de <time>20:00pm a 23:45pm</time></label>
+</div>
+
+</div> <!--cierre row -->
+
+
+
+<div class="row pantalla-chica" id="columnas" > 
+
+    <div class="col col-responsive" > 
+    <i class="fas fa-mobile-alt" id="iconos" alt="cellphone image"></i>
+    <h4 class="titulos">Teléfonos</h4>
+    <label class="palabras"><i class="fas fa-phone-alt" alt="phone image"></i> 4553-5534  /  4553-9910</label> 
+    <br>
+    <label class="palabras"> <i class="fab fa-whatsapp "  alt="whatsappicon"></i> 1128178567</label>
+    
+    </div>
+    
+    
+    <div class="col col-responsive ">
+    <i class="fas fa-map-marked-alt" id="iconos" alt="map image"></i>
+    <h4 class="titulos" >Dirección</h4>
+    <label class="palabras" > <i class="fas fa-map-marker-alt"></i> Teodoro García 2502</label>
+    
+    </div>
+    
+    <div class="col col-responsive " >
+    <i class="fas fa-store" id="iconos" alt="store image"></i>
+    <h4 class="titulos">Horarios</h4> 
+    <label class="palabras" ><i class="far fa-clock"alt="clock icon"></i> Lunes a Sábados de 12:00hs a 16 00hs</label> 
+    <label class="palabras" ><i class="far fa-clock" alt="clock icon"></i> Lunes a Domingos de 20:00hs a 23:45hs</label>
+    </div>
+    
+</div> <!--cierre row -->
+
+
+<!----------------------------REDES SOCIALES ---------------------------->
+<div class="container-fluid  redes-sociales">
+<h4 class="titulos">Visitá  nuestras redes sociales</h4>
+<a href="https://www.facebook.com/pizzeriadonmatute" target="”_blank”"> 
+<i class="fab fa-facebook redes-icon " alt="facebook icon"></i>
+</a>
+
+<a href="https://www.instagram.com/pizzeriadonmatute/" target="”_blank”">
+<i class="fab fa-instagram redes-icon"  alt="instagram icon"></i>
+</a>
+<a href="https://l.instagram.com/?u=https%3A%2F%2Ftinyurl.com%2Fpizzeriadonmatute&e=ATNvVdoSPQTh65VOhpuqDLcGMPEkfC2059rb2si1XhOKKHT100mI-P7VUgys9_aoYUEnjsSA1CcTijoxAg5EGg&s=1"
+        target="”_blank”">
+<i class="fab fa-whatsapp  redes-icon"  alt="whatsappicon"></i>
+</a>
+
+</div>
+<!----------------------------FORMULARIO---------------------------->
+<div class="form-container container-fluid"> 
+<h4 class="titulos"> Si tenés alguna consulta no dudes en escribirnos! </h4>
+<form  >
+    <div class=" border  border-4 formulario " > 
+
+    <div class="mb-3 form-group row">
+        <label class="form-label text-center">Nombre:</label>
+    
+        <input id="nombre" type="text"    class="form-control"  placeholder="Ingrese su Nombre">
+    </div>
+    <div class=" mb-3 form-group row">
+        <label  class="form-label text-center ">Teléfono:</label> 
+        <input type="text"  id="telefono" class="form-control "  placeholder="Ingrese su Teléfono">
+    </div> 
+    <div class="mb-3 form-group row">
+        <label class="form-label text-center ">Correo Electrónico:</label>
+        <input type="email" id="mail"  class="form-control "  placeholder="nombre@ejemplo.com">
+    </div>
+    <div class="mb-3 form-group row">
+        <label  class=" form-label text-center ">Ingrese su Consulta:</label>
+        <textarea class="form-control "  id="consulta" rows="4"></textarea>
+    </div>
+    <div class="mb-3 form-group row">
+    <button type="submit" id="enviar" class="form-control  btn btn-warning" >Enviar</button>
+    </div>
+</div>
+</form>
+
+
+</div>
+<!----------------------------MAP---------------------------->
+<div class="titulos row"> <h4>Cómo llegar</h4>
+</div>
+
+<div class="row "> 
+<iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13141.18876350683!2d-58.446609!3d-34.571346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5c408646663%3A0xeef8a0e8c01c43db!2sTeodoro%20Garc%C3%ADa%202502%2C%20C1426DMT%20CABA!5e0!3m2!1ses-419!2sar!4v1644079741026!5m2!1ses-419!2sar"   height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+</div>
+
+<!----------------------------FOOTER---------------------------->
+
+<footer class="footer">
+
+
+    <div class=" col foot-logo d-flex align-items-center ">
+        <a href="index.html">
+            <img src="img/logodonmatute1.png" alt="logo" /> </a>
+        <label class="col " id="donmatute"> Pizzeria Don Matute </label>
+    </div>
+
+    <div class="col foot-columna">
+        <nav class="foot-nav">
+            <li id="foot-texto"><a href="index.html">Inicio</a></li>
+            <li id="foot-texto"><a href="nuestromenu.html">Nuestro Menú</a></li>
+            <li id="foot-texto"><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li id="foot-texto"><a href="reseñas.html">Reseñas</a></li>
+            <li id="foot-texto"><a href="contacto.html">Contacto</a></li>
+        </nav>
+    </div>
+    <!--cierre clase col 2-->
+
+    <div class="col foot-columna">
+        <div>
+            <label id="foot-texto"><img src="img/iconos/ubicacion.svg" alt="locationicon" /> Teodoro Garcia
+                2502, Colegiales.
+            </label>
+        </div>
+
+        <div>
+            <label id="foot-texto"> <img src="img/iconos/phone.png" alt="phoneicon" /> 4553-5534 / 4553-9910
+            </label>
+        </div>
+        <div>
+            <label id="foot-texto"> <i class="fab fa-whatsapp" alt="whatsappicon"></i> 1128178567
+            </label>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/pizzeriadonmatute" target="”_blank”">
+                <i class="fab fa-facebook medida-icono" alt="facebook icon"></i>
+            </a>
+            <a href="https://www.instagram.com/pizzeriadonmatute/" target="”_blank”">
+                <i class="fab fa-instagram medida-icono" alt="instagram icon"></i>
+            </a>
+            <a href="https://l.instagram.com/?u=https%3A%2F%2Ftinyurl.com%2Fpizzeriadonmatute&e=ATNvVdoSPQTh65VOhpuqDLcGMPEkfC2059rb2si1XhOKKHT100mI-P7VUgys9_aoYUEnjsSA1CcTijoxAg5EGg&s=1"
+                target="”_blank”">
+                <i class="fab fa-whatsapp medida-icono " alt="whatsappicon"></i>
+            </a>
+        </div>
+        <!--cierre clase redes sociales-->
+    </div>
+    <!--cierre ultima columna-->
+</footer>
+
+<script>
+    $(window).scroll(function(){
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 250);
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

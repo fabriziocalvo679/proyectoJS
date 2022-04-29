@@ -1,0 +1,156 @@
+/* FONDO DE LA PAGINA  */
+@import "variables" ;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,400;1,500&display=swap');
+
+body {margin: 0%;
+padding:0%;
+overflow-x: hidden;
+background-color: black}
+
+
+/* ---------BARRA DE NAVEGACION MENU PRINCIPAL-----------*/
+@import "navbar";
+
+
+
+/* ---------ENCABEZADO E IMAGEN -----------*/
+.titulo-encabezado { height: 50vh;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+    color: $color-encabezado;
+    text-shadow: black 1px 1px;
+    background-image: url(../img/banners/menu-ban.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    
+    h1 { position: relative;
+    top: 50%;}
+    }
+
+/* ---------BARRA DE NAVEGACION PEDIDO -----------*/
+
+.barra-pedido {margin-left: 100px;
+    margin-right: 100px ;
+    height: 35px;
+    margin-top: 20px;
+    display: flex;
+    position: sticky ; 
+    top: 0 ;
+    overflow-x: hidden;
+    background-color: #ebebeb;
+}
+.barra-pedido a {flex: 1;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+transition: .2s ease-in-out all ;
+list-style: none;
+text-decoration: none;
+color: black;
+font-family: 'open sans';
+font-size: 16px;
+font-weight: 600;
+}
+
+.barra-pedido a:hover { 
+background-color: rgb(209, 209, 209);
+}
+
+nav #indicador { 
+    width: 100px;
+    height: 7px;
+    background-color: $color-titulos;
+    position: absolute;
+    bottom: 0%;
+    transition: .3s ease-out all;
+    transform: translateX(-500px);
+
+}
+
+
+//------------ENCABEZADO secciones------------// 
+
+.encabezado-seccion {text-align: center;
+padding: 20px;
+h2 {
+font-size: 50px;
+font-family:$font-textos;
+color:beige;}
+
+}
+
+
+
+
+/* CONTENEDOR PRODUCTO */
+
+
+.titulo {font-family: 'Dancing Script', cursive;
+    font-size:  25px; 
+    color:beige;
+}
+.seccion {padding: 10px;}
+
+
+.producto {text-align: start;
+padding: 25px;
+color: $color-titulos;
+align-items: center;
+}
+
+.detalle{padding: 20px;}
+.detalle p {font-family: 'open sans';
+padding: 3px;
+font-size: 15px;}
+.precio { display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: space-around;
+color: beige;
+}
+
+
+.btn-warning { background-color:  beige !important;
+border: $color-titulos!important;
+}
+.btn-warning:hover { background-color: $color-titulos!important;
+}
+#lista-platillos { margin-top: 30px;}
+
+
+
+@import "carrito" ;
+
+
+
+.ir-arriba{display: none;
+    font-size: 15px;
+    color: rgb(41, 38, 38) ;
+    padding: 10px ;
+    cursor: pointer ;
+    background-color:beige;
+    opacity: 75%;
+    border-style: solid;
+    border-color: black;
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    }
+    
+
+/*---------PIE DE PAGINA -------*/
+@import "footer";
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--hoja de estilos-->
+    <link rel="stylesheet" href="css/nuestromenu-min.css" />
+    <style>@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,400;1,500&display=swap");</style>
+    <!--archivos javascript-->
+    <script defer src="./js/variables.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/arriba.js"></script>
+    <!--Fontawesome icons-->
+    <script src="https://kit.fontawesome.com/a91c5402c2.js" crossorigin="anonymous"></script>
+    <!--Favicon-->
+    <link rel="icon" href="favicon/logodonmatute.png">
+    
+    <title>Proyecto JS</title>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainMenu"> 
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo-img" src="img/logodonmatute1.png" alt="logo" /> </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active"  href="nuestromenu.html">Nuestro Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobrenosotros.html"> Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="reseñas.html">Reseñas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contacto.html">Contacto</a>
+                    </li>
+                    <ul class="navbar-brand">
+                        <li class="submenu">
+                            <i class="fa-solid fa-cart-shopping"></i> 
+                            <div id="carrito">
+                                <p class="vacio">carrito vacio</p>
+                                <table id="lista-carrito" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Imagen</th>
+                                            <th scope="col">Producto</th>
+                                            <th scope="col">Precio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                                <a class="btn btn-warning" href="#" id="vaciar-carrito" >vaciar carrito</a>
+                                <a onclick="window.location = 'checkout.html' " target="_new" href="checkout.html" class="btn btn-warning"  id="confirmarPedido">Confirmar Pedido</a> </div>
+                        </li>
+                    </ul>
+                </ul>
+        </div>
+</nav>
+<div class="titulo-encabezado border-bottom"> 
+<h1 class="text-center" >Nuestro Menú </h1>
+</div> 
+
+<!--- barra de navegacion de productos -->
+
+<nav class="barra-pedido " id="menu">
+    <a href="#1"><li >Pizzas</li></a> 
+    <a href="#2"><li >Empanadas</li></a>
+    <a href="#3"><li >Bebidas</li></a>
+    <a href="#4"><li >Postres</li></a>
+    <span  id="indicador"></span>
+</nav>
+
+<!---CONTENIDO PRODUCTOS-->
+
+<div class="secciones"  id="lista-platillos"> 
+
+<!--PIZZAS-->
+
+<div  class=" seccion " id="1" >
+
+<!--encabezado -->
+<div class="row encabezado-seccion  py-3" >
+    <h2>Pizzas</h2>
+</div>
+
+<div class="row ">
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/mozza.jpg"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4  class="mb-2 titulo">Pizza de Mozzarella</h4>
+                    <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, aceitunas y Orégano</p> 
+                </div> 
+                <div class="col-2 precio  "> <!---precio-->
+                    <p class="mb-0 "> <span>$980</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="1"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+</div>
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+                    <div class="foto col-3 aling-self-center"> <!--foto-->
+                        <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/jamon.jpg"> </div>
+                    </div>
+                    <div class="col-7 detalle"> <!--descripcion-->
+                        <h4  class="mb-2 titulo">Pizza de Jamón</h4>
+                        <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, Jamón, aceitunas y Orégano</p> 
+                    </div>
+                    <div class="col-2 precio"> <!---precio-->
+                        <p class="mb-0 precio "> <span>$1210</span> </p>
+                        <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="2"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                    </div>
+</div>
+
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                        <div class="foto col-3 aling-self-center"> <!--foto-->
+                            <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/caprese.jpg"> </div>
+                        </div>
+                        <div class="col-7 detalle"> <!--descripcion-->
+                            <h4  class="mb-2 titulo">Pizza Caprese</h4>
+                            <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, rodajas de tomate,albahaca, aceitunas y Orégano</p> 
+                        </div>
+                        <div class="col-2 precio"> <!---precio-->
+                            <p class="mb-0 precio "> <span>$1210</span> </p>
+                            <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="3"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                        </div>
+</div>
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                            <div class="foto col-3 aling-self-center"> <!--foto-->
+                                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/napo.jpg"> </div>
+                            </div>
+                            <div class="col-7 detalle"> <!--descripcion-->
+                                <h4  class="mb-2 titulo">Pizza Napolitana</h4>
+                                <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, rodajas de tomate, provenzal, aceitunas y Orégano</p> 
+                            </div>
+                            <div class="col-2 precio"> <!---precio-->
+                                <p class="mb-0 precio "> <span>$1210</span> </p>
+                                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="4"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                            </div>
+</div>
+
+</div>
+
+<!-- SEGUNDA FILA-->
+
+<div class="row">
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+        <div class="foto col-3 aling-self-center"> <!--foto-->
+            <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/calabresa.jpg"> </div>
+        </div>
+        <div class="col-7 detalle"> <!--descripcion-->
+            <h4  class="mb-2 titulo">Pizza Calabresa</h4>
+            <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, rodajas de calabresa, aceitunas y Orégano</p> 
+        </div>
+        <div class="col-2 precio"> <!---precio-->
+            <p class="mb-0 precio "> <span>$1330</span> </p>
+            <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="5"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+        </div>
+</div>
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                            <div class="foto col-3 aling-self-center"> <!--foto-->
+                                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/esp.jpg"> </div>
+                            </div>
+                            <div class="col-7 detalle"> <!--descripcion-->
+                                <h4  class="mb-2 titulo">Pizza Española</h4>
+                                <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, rodajas de chorizo colorado, morrón, aceitunas y Orégano</p> 
+                            </div>
+                            <div class="col-2 precio"> <!---precio-->
+                                <p class="mb-0 precio "> <span>$1330</span> </p>
+                                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="6"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                            </div>
+</div>
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+    <div class="foto col-3 aling-self-center"> <!--foto-->
+        <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/jamonyanana.jpg"> </div>
+    </div>
+    <div class="col-7 detalle"> <!--descripcion-->
+        <h4  class="mb-2 titulo">Pizza de Jamón y Ananá</h4>
+        <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, jamón, rodajas de Ananá, aceitunas y Orégano</p> 
+    </div>
+    <div class="col-2 precio"> <!---precio-->
+        <p class="mb-0 precio "> <span>$1330</span> </p>
+        <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="7"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+    </div>
+</div>
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+    <div class="foto col-3 aling-self-center"> <!--foto-->
+        <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/pizzas/ruculaycrudo.jpg"> </div>
+    </div>
+    <div class="col-7 detalle"> <!--descripcion-->
+        <h4  class="mb-2 titulo">Pizza de Jamón Crudo y Rúcula</h4>
+        <p class="mb-0">Ingredientes: Mozarella, salsa de tomate, Jamón Crudo, Rúcula, aceitunas y Orégano</p> 
+    </div>
+    <div class="col-2 precio"> <!---precio-->
+        <p class="mb-0 precio "> <span>$1330</span> </p>
+        <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="8"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+    </div>
+</div>
+
+</div> <!---cierre fila-->
+
+
+</div> <!--cierre secion pizzas-->
+
+<!--EMPANADAS-->
+
+
+<div  class=" seccion " id="2" >
+
+
+<!--encabezado -->
+<div class="row encabezado-seccion " >
+        <h2>Empanadas</h2>
+</div>
+
+<!---contenido seccion  empanadas-->
+
+<div class="row"> 
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/carne suave.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Carne Suave Molida</h4>
+                <p class="mb-0">Ingredientes:carne molida, cebolla de verdeo, cebolla, morrón y condimentos</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="9"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div><!--CIERRE PRODUCTO-->
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/picante.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Carne Picante</h4>
+                <p class="mb-0">Ingredientes:carne molida, aji picante, cebolla de verdeo, cebolla, morrón y condimentos</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="10"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> 
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/cuchillo.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Carne Suave a Cuchillo</h4>
+                <p class="mb-0">Ingredientes: trozos de carne, cebolla de verdeo, cebolla, morrón y condimentos</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="11"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> 
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/pollo.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Pollo</h4>
+                <p class="mb-0">Ingredientes:pollo, cebolla de verdeo, cebolla, morrón y condimentos</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="12"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> 
+
+
+
+</div> <!---cierre fila-->       
+
+<div class="row">
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/jamonq.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Jamón y Queso</h4>
+                <p class="mb-0">Ingredientes: Mozarrella y Jamón</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="13"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> <!--CIERRE PRODUCTO-->
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/cebolla.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Cebolla y Queso</h4>
+                <p class="mb-0">Ingredientes: Mozarrella y Cebolla</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="14"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> <!--CIERRE PRODUCTO-->
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/calabresa.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Calabresa</h4>
+                <p class="mb-0">Ingredientes: Mozarrella y Calabresa</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="15"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> <!--CIERRE PRODUCTO-->
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/humita.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">humita</h4>
+                <p class="mb-0">Ingredientes: Choclo y salsa blanca</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="16"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> <!--CIERRE PRODUCTO-->
+
+</div>   <!--cierre fila-->  
+
+<div class="row">
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+        <div class="foto col-3 aling-self-center"> <!--foto-->
+            <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/caprese.jpg"> </div>
+        </div>
+        <div class="col-7 detalle"> <!--descripcion-->
+            <h4 class="mb-2 titulo ">Caprese</h4>
+            <p class="mb-0">Ingredientes: Mozarrella, albahaca y tomate</p> 
+        </div>
+        <div class="col-2 precio"> <!---precio-->
+            <p class="mb-0 precio "> <span>$135</span> </p>
+            <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="17"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+        </div>
+</div> 
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/espan.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Española</h4>
+                <p class="mb-0">Ingredientes: Mozarrella, chorizo colorado y morrón</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="18"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> <!--CIERRE PRODUCTO-->
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/roque.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Roquefort</h4>
+                <p class="mb-0">Ingredientes: Mozarrella y queso roquefort</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="19"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> <!--CIERRE PRODUCTO-->
+
+<div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/empanadas/verdura.jpg"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Verdura</h4>
+                <p class="mb-0">Ingredientes: Acelga y salsa blanca</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$135</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="20"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+</div> <!--CIERRE PRODUCTO-->
+
+</div>
+</div> <!--cierre secion-->
+
+<!--Gaseosas-->
+
+<div  class=" seccion " id="3" >
+
+
+    <!--encabezado -->
+    <div class="row encabezado-seccion " >
+            <h2>Bebidas</h2>
+    </div>
+    
+
+<div class="row"> 
+
+
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/lata/coca.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Coca Cola Común</h4>
+                    <p class="mb-0">Coca Cola sabor original 354ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$145</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="21"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div>
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/lata/cocazero.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Coca Cola Zero</h4>
+                    <p class="mb-0">Coca Cola sin azúcar 354ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$145</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="22"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> 
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/lata/sprite.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Sprite Común</h4>
+                    <p class="mb-0">Sprite sabor original 354ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$145</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="23"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> 
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/lata/fanta.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Fanta Común</h4>
+                    <p class="mb-0">gaseosa sabor naranja  354ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$145</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="24"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> 
+    
+    
+    
+    </div> <!---cierre fila-->       
+    
+    <div class="row">
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/medio/coca.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Coca Cola común</h4>
+                    <p class="mb-0">Coca Cola Original 500ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$165</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="25"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> <!--CIERRE PRODUCTO-->
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/medio/coca-zero.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Coca cola Zero </h4>
+                    <p class="mb-0">Coca Cola sin azúcar 500ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$165</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="26"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> <!--CIERRE PRODUCTO-->
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/medio/sprite.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Sprite Común</h4>
+                    <p class="mb-0">Sprite sabor original 500ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$165</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="27"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> <!--CIERRE PRODUCTO-->
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/medio/levite.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Levite Pomelo </h4>
+                    <p class="mb-0">Agua saborizada sabor pomelo 500ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$165</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="28"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> <!--CIERRE PRODUCTO-->
+    
+    </div>   <!--cierre fila-->  
+    
+    <div class="row">
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+            <div class="foto col-3 aling-self-center"> <!--foto-->
+                <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/litro/coca.JPG"> </div>
+            </div>
+            <div class="col-7 detalle"> <!--descripcion-->
+                <h4 class="mb-2 titulo ">Coca Cola Original Grande</h4>
+                <p class="mb-0">coca cola sabor original 1500ml</p> 
+            </div>
+            <div class="col-2 precio"> <!---precio-->
+                <p class="mb-0 precio "> <span>$320</span> </p>
+                <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="29"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+            </div>
+    </div> 
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/litro/zero.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Coca Cola Zero Grande</h4>
+                    <p class="mb-0">coca cola sin azúcar 1500ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$320</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="30"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> <!--CIERRE PRODUCTO-->
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/litro/sprite.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Sprite Grande</h4>
+                    <p class="mb-0">Sprite sabor original 1500ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$320</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="31"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> <!--CIERRE PRODUCTO-->
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/gaseosas/litro/fanta.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Fanta Grande</h4>
+                    <p class="mb-0">gaseosa sabor naranja 1500ml</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$320</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="32"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> <!--CIERRE PRODUCTO-->
+    
+    </div>
+</div> <!--cierre secion-->
+
+
+
+<div  class=" seccion " id="4" >
+
+
+    <!--encabezado -->
+    <div class="row encabezado-seccion " >
+            <h2>Postres</h2>
+    </div>
+    
+
+<div class="row"> 
+
+
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/postres/choco.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Chocolate Tentación</h4>
+                    <p class="mb-0">Helado sabor chocolate con dulce de leche y chips de chocolate</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$590</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="33"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div>
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom border-top"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/postres/cookies.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Cookies and Cream</h4>
+                    <p class="mb-0">Helado de crema con pedazos de galletita oreo y dulce de leche</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$590</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="34"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> 
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/postres/ddl.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Dulce de Leche Tentación</h4>
+                    <p class="mb-0">Helado sabor dulce de leche con dulce de leche</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$590</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="35"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> 
+    
+    <div class="col-12 col-md-6 d-flex producto py-3 border-bottom"> 
+                <div class="foto col-3 aling-self-center"> <!--foto-->
+                    <div class="ratio ratio-1x1"> <img class="object-fit-cover" src="./img/menu/postres/frutilla.JPG"> </div>
+                </div>
+                <div class="col-7 detalle"> <!--descripcion-->
+                    <h4 class="mb-2 titulo ">Frutilla a la crema</h4>
+                    <p class="mb-0">Helado de crema sabor Frutilla</p> 
+                </div>
+                <div class="col-2 precio"> <!---precio-->
+                    <p class="mb-0 precio "> <span>$590</span> </p>
+                    <a href="#" class="btn btn-warning agregar-carrito mb-0" data-id="36"><i class="fa-solid fa-cart-arrow-down"></i> </a>
+                </div>
+    </div> 
+    </div> <!---cierre fila-->       
+
+</div> <!--cierre secion-->
+
+
+</div>
+
+<!--Pie de pagina-->
+<footer class="footer contenedor">
+
+    <div class=" col foot-logo d-flex align-items-center ">
+        <a href="index.html">
+            <img src="img/logodonmatute1.png" alt="logo" /> </a>
+        <label class="col " id="donmatute"> Pizzeria Don Matute </label>
+    </div>
+
+    <div class="col foot-columna">
+        <nav class="foot-nav">
+            <li id="foot-texto"><a href="index.html">Inicio</a></li>
+            <li id="foot-texto"><a href="nuestromenu.html">Nuestro Menú</a></li>
+            <li id="foot-texto"><a href="sobrenosotros.html"> Sobre Nosotros</a></li>
+            <li id="foot-texto"><a href="reseñas.html">Reseñas</a></li>
+            <li id="foot-texto"><a href="contacto.html">Contacto</a></li>
+        </nav>
+    </div>
+    <!--cierre clase col 2-->
+
+    <div class="col foot-columna">
+        <div>
+            <label id="foot-texto"><img src="img/iconos/ubicacion.svg" alt="locationicon" /> Teodoro Garcia
+                2502, Colegiales.
+            </label>
+        </div>
+
+        <div>
+            <label id="foot-texto"> <img src="img/iconos/phone.png" alt="phoneicon" /> 4553-5534 / 4553-9910
+            </label>
+        </div>
+        <div>
+            <label id="foot-texto"> <i class="fab fa-whatsapp" alt="whatsappicon"></i> 1128178567
+            </label>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/pizzeriadonmatute" target="”_blank”">
+                <i class="fab fa-facebook medida-icono" alt="facebook icon"></i>
+            </a>
+            <a href="https://www.instagram.com/pizzeriadonmatute/" target="”_blank”">
+                <i class="fab fa-instagram medida-icono" alt="instagram icon"></i>
+            </a>
+            <a href="https://l.instagram.com/?u=https%3A%2F%2Ftinyurl.com%2Fpizzeriadonmatute&e=ATNvVdoSPQTh65VOhpuqDLcGMPEkfC2059rb2si1XhOKKHT100mI-P7VUgys9_aoYUEnjsSA1CcTijoxAg5EGg&s=1"
+                target="”_blank”">
+                <i class="fab fa-whatsapp medida-icono " alt="whatsappicon"></i>
+            </a>
+        </div>
+        <!--cierre clase redes sociales-->
+    </div>
+    <!--cierre ultima columna-->
+</footer>
+
+
+<!--BOTON -->
+<span  > <i class="fa-solid fa-angle-up ir-arriba"></i> 
+</span>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>

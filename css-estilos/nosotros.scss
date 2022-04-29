@@ -1,0 +1,147 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,400;1,500&display=swap');
+
+* {overflow-x: hidden;
+padding: 0px;
+margin: 0px;
+}
+
+.fondo {background-color: rgb(5, 5, 5);}  
+
+@import "navbar";
+
+.encabezado { height: 50vh;
+text-align: center;
+font-family: 'Dancing Script', cursive;
+font-size: 65px;
+color: $color-encabezado;
+text-shadow: black 1px 1px;
+background-image: url(../img/banners/nosotros-banner.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: bottom;
+background-attachment: fixed;
+
+h1 { position: relative;
+top: 50%;}
+}
+
+
+
+
+/*--------- CONTENEDOR FLEX UNO ---------- */
+.banner {font-family:$font-titulos;
+font-size: 60px;
+font-style: italic;
+padding-bottom: 3rem;
+text-align: center;
+color: beige;
+}
+
+.contenedor-flex {display: flex;
+padding: 50px;
+align-items: center;
+text-align: center;
+}
+
+
+
+#parrafo {text-align: center;
+font-size: 20px;
+margin-right: 50px !important;
+font-family:'Open Sans', sans-serif;
+font-style: italic;
+color: beige;
+word-spacing: 2px;
+line-height: 35px;}
+
+
+.contenedor-fotografia {height: 400px;
+background-image: url(../img/nosotros/local.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;}
+
+.contenedor-fotografia.dos {height: 400px;
+    background-image: url(../img/nosotros/kitchen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+background-position:center;}
+
+/*--------- CONTENEDOR FLEX DOS ---------- */
+
+
+.contenedor-flex-productos {display: flex;
+padding: 50px;
+align-items: center;
+text-align: center; 
+img {max-height: 490px;}
+}
+
+.banner-productos {font-family:$font-titulos;
+font-style: italic;
+text-align: center;
+color: bisque;
+font-size: 60px;
+padding-bottom: 3rem;
+}
+
+.parrafo-productos {text-align: center;
+font-size: 20px;
+font-family:'Open Sans', sans-serif;
+font-style: italic;
+color: bisque;
+word-spacing: 2px;
+line-height: 35px;;}
+
+
+
+
+/*---------CIERRE CONTENEDORES ------------ */
+
+@import "footer";
+
+/*-------------------------------------------RESPONSIVE-------------------------------------------------*/
+
+
+@media (max-width: 992px) {
+/* ---------NOSOTROS  -----------*/
+
+.contenedor-flex {flex-direction: column;}
+
+.banner {
+padding: 10px;
+}
+
+
+
+
+/* --------NUESTROS PRODUCTOS -----------*/
+
+.contenedor-flex-productos{flex-direction: column-reverse;}
+.banner-productos {
+padding: 10px;
+}
+
+#parrafo {text-align: center;
+padding: 5px;}
+.parrafo-productos {padding: 5px;
+text-align: center;
+}
+
+
+}
+@media (max-width: 576px) {
+
+.encabezado{ background-attachment: scroll;}
+.contenedor-fotografia {background-attachment: scroll;}
+
+#parrafo {text-align: center;
+padding: 5px;}
+.parrafo-productos {padding: 5px;
+text-align: center;
+}
+}
+
+@import "carrito" ;

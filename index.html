@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; ISO-8859-1">
+    <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
+    <META NAME="DESCRIPTION" CONTENT="Las mejores pizzas de colegiales , acá vas a encontrar pizzas empanadas bebidas y mas !">
+    <META NAME="KEYWORDS" CONTENT="pizzería,pizzas,empanadas,calzones,bebidas,postres,colegiales,Belgrano,las cañitas,Palermo,Núñez">
+    <META NAME="Resource-type" CONTENT="Document">
+    <META NAME="robots" content="ALL">
+    <link rel="icon" href="favicon/logodonmatute.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/inicio-min.css" />
+    <script src="https://kit.fontawesome.com/a91c5402c2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="/js/menu.js" ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Pizzería Don Matute</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-img" src="img/logodonmatute1.png" alt="logo" /> </a>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "  href="nuestromenu.html">Nuestro Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobrenosotros.html"> Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  " href="reseñas.html">Reseñas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contacto.html">Contacto</a>
+                        </li>
+                        <ul class="navbar-brand">
+                            <li class="submenu">
+                                <i class="fa-solid fa-cart-shopping"></i> 
+                                <div id="carrito">
+                                    <p class="vacio">carrito vacio</p>
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Imagen</th>
+                                                <th scope="col">Producto</th>
+                                                <th scope="col">Precio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
+                                    <a class="btn btn-warning" href="#" id="vaciar-carrito" >vaciar carrito</a>
+                                    <a onclick="window.location = 'checkout.html' " target="_new" href="checkout.html" class="btn btn-warning"  id="confirmarPedido">Confirmar Pedido</a> </div>
+                            </li>
+                    </ul>
+            </div>
+</nav>
+
+
+<!--PRIMERA SECCION -->
+<div   class="texto-central container-fluid" id="background">
+        <h1  data-aos="fade-right" data-aos-offset="100"id="pizzeria"> Pizzería</h1>
+        <h1   data-aos="fade-left" data-aos-offset="100"id="don-matute">Don Matute </h1> 
+</div>
+<!--SEGUNDA SECCION CARDS-->
+
+<div data-aos="slide-left" data-aos-offset="150" class="encabezado sabor row">
+    <label>Descubrí Un Sabor Inolvidable</label>
+
+</div>
+<div  class="row  g-4 segunda-seccion">
+
+<div class="col-6">
+    <div  data-aos="zoom-in-down" data-aos-offset="250" class="card h-100">
+        <a href="nuestromenu.html"> <img src="./img/pizza-jamon-y-morron.jpg" class="card-img-top" alt="pizzas" loading="lazy"> </a>
+        <div class="card-body recuadros">
+        <h5 class="card-title">Pizzas</h5>
+        <p class="card-text">En Don Matute tenemos una amplia variedad de pizzas para elegir, pero también podes armarla como a vos te guste !</p> 
+        <a onclick="window.location = 'nuestromenu.html' " target="_new" href="nuestromenu.html" class="btn btn-warning"  >Pedir Ahora !</a>
+        </div>
+    </div>
+</div>
+<div class="col-6">
+    <div  data-aos="zoom-in-down" data-aos-offset="300" class="card h-100">
+        <a href="nuestromenu.html">  <img src="./img/empanadas.JPG" class="card-img-top" alt="empanadas" loading="lazy"> </a>
+        <div class="card-body recuadros">
+        <h5 class="card-title">Empanadas</h5>
+        <p class="card-text"> Nuestras empanadas son al horno , preparadas 100% por nosotros. Tenés doce sabores para deleitarte. <br> Elegi la que mas te guste!</p>
+        <a onclick="window.location = 'nuestromenu.html' " target="_new" href="nuestromenu.html" class="btn btn-warning"  >Pedir Ahora !</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!--TERCERA SECCION ENVIOS-->
+
+<div data-aos="slide-right" data-aos-offset="150" class="encabezado envio row">
+<label id="sin-moverte"> Disfruta Sin Moverte de Tu Casa</label>
+
+</div>
+
+<div class="row foto-envios"> 
+
+<img  src="img/envios.jpg" alt="deliveryboy" loading="lazy"> 
+
+</div>
+
+
+
+
+<!--FOOTER-->
+<footer class="footer ">
+
+        <div class=" col foot-logo d-flex align-items-center ">
+            <a href="index.html">
+                <img src="img/logodonmatute1.png" alt="logo" /> </a>
+            <label class="col " id="donmatute"> Pizzeria Don Matute </label>
+        </div>
+
+        <div class="col foot-columna">
+            <nav class="foot-nav">
+                <li id="foot-texto"><a href="index.html">Inicio</a></li>
+                <li id="foot-texto"><a href="nuestromenu.html">Nuestro Menú</a></li>
+                <li id="foot-texto"><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li id="foot-texto"><a href="reseñas.html">Reseñas</a></li>
+                <li id="foot-texto"><a href="contacto.html">Contacto</a></li>
+            </nav>
+        </div>
+        <!--cierre clase col 2-->
+
+        <div class="col foot-columna">
+            <div>
+                <label id="foot-texto"><img src="img/iconos/ubicacion.svg" alt="locationicon" /> Teodoro Garcia
+                    2502, Colegiales.
+                </label>
+            </div>
+
+            <div>
+                <label id="foot-texto"> <img src="img/iconos/phone.png" alt="phoneicon" /> 4553-5534 / 4553-9910
+                </label>
+            </div>
+            
+            <div>
+                <label id="foot-texto"> <i class="fab fa-whatsapp" alt="whatsappicon"></i> 1128178567
+                </label>
+            </div>
+
+            <div>
+                <a href="https://www.facebook.com/pizzeriadonmatute" target="”_blank”">
+                    <i class="fab fa-facebook medida-icono" alt="facebook icon"></i>
+                </a>
+                <a href="https://www.instagram.com/pizzeriadonmatute/" target="”_blank”">
+                    <i class="fab fa-instagram medida-icono" alt="instagram icon"></i>
+                </a>
+                <a href="https://l.instagram.com/?u=https%3A%2F%2Ftinyurl.com%2Fpizzeriadonmatute&e=ATNvVdoSPQTh65VOhpuqDLcGMPEkfC2059rb2si1XhOKKHT100mI-P7VUgys9_aoYUEnjsSA1CcTijoxAg5EGg&s=1"
+                    target="”_blank”">
+                    <i class="fab fa-whatsapp medida-icono " alt="whatsappicon"></i>
+                </a>
+            </div>
+            <!--cierre clase redes sociales-->
+        </div>
+        <!--cierre ultima columna-->
+</footer>
+
+
+</body>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 350);
+        });
+    
+        AOS.init({
+                    easing: 'ease-in-sine',
+                    duration: 1000 ,
+                });
+</script>
+</html>

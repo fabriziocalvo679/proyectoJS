@@ -1,0 +1,47 @@
+
+
+/* ----------------------FORMULARIO-------------------------- */
+body {background-image: url(../img/form-background.jpeg);
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;}
+    
+    .titulo {padding: 50px;
+    font-family: "Dancing Script";
+    font-size: 35px;
+    text-align: center;
+    color: beige;
+    }
+    
+    .form-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      
+      .formulario {
+        padding: 25px;
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+      
+      .mb-3 {
+        color: beige;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+    label.col-form-label {text-shadow: black 2px 2px;
+        font-family: "Open Sans", sans-serif;}
+      
+      .boton-enviar
+      {
+        padding-top: 20px;
+      }
+      
+    
+    .focus-inputs {background-color: bisque !important;}
+
+
+    @import "footer";

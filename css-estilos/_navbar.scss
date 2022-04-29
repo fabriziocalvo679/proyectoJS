@@ -1,0 +1,67 @@
+
+*{margin: 0px;
+padding: 0px;}
+
+.logo-img { margin-left: 60px;
+width: 40px;
+height: auto;
+margin-right: 200px;
+}
+
+.carrito-img {margin-left: 20px;
+font-size: 25px;
+}
+.submenu i {font-size: 20px;
+
+}
+
+.navbar li {padding-inline: 25px;
+    align-self: center;
+}
+.navbar .nav-link{   border-bottom: 2px;
+    color: beige!important;}
+.navbar .nav-link:hover {border-bottom: 2px solid ;
+
+}
+
+.nav-link.active { border-bottom: 2px solid beige !important;
+color: beige !important ;}
+
+
+.bg-dark {background-color:gray; opacity: 65%!important;
+transition: 0.80s ease;}
+.bg-dark.scrolled  { background-color: rgb(255, 212, 160)!important; opacity: 95% !important;
+}
+
+.bg-dark.scrolled .nav-link  { color: black !important;}
+.bg-dark.scrolled .nav-link.active { border-bottom: 2px solid rgb(0, 0, 0) !important;}
+.bg-dark.scrolled .submenu i {color: black;}
+
+
+
+/* ---------RESPONSIVE -----------*/
+
+@media (max-width: 992px) {
+
+.navbar li {padding-left: 65px;}
+
+
+.barra-navegacion li {padding-inline: 30px;}
+
+
+.submenu {text-align: center;}
+#carrito { text-align: center;}
+}
+
+
+
+
+@media (max-width: 576px) {
+.logo-img {margin-right: 0px;} }
+
+@media (min-width: 1920px) {
+
+    .navbar {padding-left: 200px;
+    }
+    #carrito {margin-left: 200px;}
+}
